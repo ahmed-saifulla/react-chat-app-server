@@ -1,17 +1,10 @@
 // const mongoose = require("mongoose");
 const server = require("http").createServer();
 // const Msg = require("./models/messages")
-// const io = require("socket.io")(server, {
-//     cors: {
-//         origin: "*",
-//     },
-// });
-
 const io = require("socket.io")(server, {
     cors: {
         origin: "*",
-        methods: ["GET", "POST"]
-    }
+    },
 });
 
 
