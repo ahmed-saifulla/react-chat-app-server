@@ -10,7 +10,7 @@ const io = require("socket.io")(server, {
 });
 
 
-const PORT = 4000;
+const PORT = process.env.PORT || 80;
 
 // mongoose.connect('mongodb://localhost:27017/chatApp', {
 //     useCreateIndex: true,
