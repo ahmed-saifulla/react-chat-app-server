@@ -3,9 +3,16 @@ const server = require("http").createServer();
 // const Msg = require("./models/messages")
 const io = require("socket.io")(server, {
     cors: {
-        origin: "https://react-chat-app-saif.herokuapp.com/",
+        origin: "https://react-chat-app-saif.herokuapp.com",
         methods: ["GET", "POST"],
-        credentials: true
+        credentials: true,
+        transports: [            // all transports (optional if you want flashsocket)
+            'websocket'
+            , 'flashsocket'
+            , 'htmlfile'
+            , 'xhr-polling'
+            , 'jsonp-polling'
+        ]
     },
 });
 
